@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <title>Core Tech | Custom PC Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-dark">
+
+    <header class="main-header">
+        <div class="nav-container">
+            <div class="brand">CORE<span>TECH</span></div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html">Pocetna</a></li>
+                    <li><a href="components.html">Komponente</a></li>
+                    <li><a href="builder.html">Konfigurator</a></li>
+                    <li><a href="contact.html">Podrska</a></li>
+                </ul>
+            </nav>
+            <div class="style-picker">
+                <button class="mode-btn lgt" onclick="setTheme('theme-light')"></button>
+                <button class="mode-btn drk" onclick="setTheme('theme-dark')"></button>
+                <button class="mode-btn acc" onclick="setTheme('theme-accent')"></button>
+            </div>
+        </div>
+    </header>
+
+    <main class="content-wrapper">
+        <section class="hero-section">
+            <h1>Sklopi svoj Extreme Build</h1>
+            <p>Odaberi vrhunski hardver. Mi radimo kabliranje i optimizaciju sistema.</p>
+            
+            <div class="action-box">
+                <button id="toggleBtn" class="main-cta">Tehnicka specifikacija</button>
+                <div id="extraContent" class="info-reveal hidden">
+                    <p>Svi build-ovi dolaze sa pre-instaliranim drajverima, overclock-ovanim RAM profilima i stres testom od 24h kako bi osigurali stabilnost u radu.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="dynamic-section">
+            <div class="form-card">
+                <h3>Dodaj komponentu u listu</h3>
+                <input type="text" id="inputNaslov" placeholder="Naziv komponente (npr. RTX 4090)...">
+                <input type="text" id="inputCena" placeholder="Cena u EUR...">
+                <button onclick="dodajElement()" class="add-btn">UBACI U KORPU</button>
+            </div>
+            <div id="dynamicGrid" class="item-grid"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
